@@ -37,6 +37,11 @@ dialog{color:var(--ink);background:var(--paper);padding:0;border:1px solid var(-
 @media(max-width:480px){.toolbar{padding:0 16px}.toolbar-tools{gap:0}.tool-button{padding:0 8px;min-width:60px;font-size:11px}.tool-button .icon{width:16px;height:16px}.cover h1{font-size:46px}.chapter-context{padding-top:32px}.contents-search{padding:16px 16px 0}.cover-index{gap:6px 12px}.settings-dialog .dialog-body{padding:20px}.search-shortcuts{gap:12px}}
 @media(max-width:359px){.toolbar{padding:0 12px}.tool-button{min-width:54px;padding:0 6px}.cover h1{font-size:40px}.cover-index{grid-template-columns:1fr 1fr}.index-name{font-size:10px}.index-number{font-size:14px}}
 
+/* Reader v1.2: cover metadata has one quiet row; no maintenance labels. */
+.cover-top{font-size:11px;letter-spacing:.035em}.cover-top span:last-child{font-size:11px;letter-spacing:.035em;color:var(--muted)}
+body[data-current="cover"] .reading-label{visibility:hidden}
+@media(max-width:480px){.cover-top,.cover-top span:last-child{font-size:10px}}
+
 @media print{:root,:root[data-theme="dark"]{--paper:#fff;--ink:#000;--muted:#555;--line:#ccc;--book:"Hiragino Sans GB","PingFang SC","Microsoft YaHei",sans-serif;color-scheme:light}body{background:#fff;color:#000}.toolbar,.sidebar,.chapter-nav,.footer,.cover-actions,dialog,.skip,.no-script{display:none!important}.reading-area{margin:0;padding:0}main{max-width:none}.enhanced .chapter[hidden],.enhanced .cover[hidden],.chapter,.cover{display:block!important}.cover{min-height:0;page-break-after:always;padding:100px 0}.chapter{font-size:11pt;line-height:1.8;padding:0;page-break-before:always}.chapter::before{content:attr(data-part);display:block;font-family:var(--ui);font-size:9pt;letter-spacing:.08em;color:var(--muted);margin:0 0 14px}.print-toc{display:block;page-break-before:always;page-break-after:always;padding:0;font-family:var(--ui)}.print-toc h2{font-family:var(--book);font-size:20pt;margin:0 0 24px}.print-toc .toc-columns{columns:2;column-gap:24px}.print-toc .toc-group{break-inside:avoid;margin:0 0 14px}.print-toc .toc-group p{font-size:9pt;margin:0 0 5px}.print-toc .toc-group a{min-height:0;display:block;font-size:10pt;line-height:1.65;padding:3px 0}.chapter h1{font-size:20pt;margin-bottom:28px}.chapter h2{page-break-after:avoid}.chapter p{orphans:3;widows:3}#c18 h2{margin:28px 0 14px}.chapter p:target{outline:0}a{color:#000;text-decoration:none}@page{margin:22mm 20mm}}
 
 @media print{.icon-defs,.cover-top,.cover-index,.chapter-context,.reader-announcement{display:none!important}.chapter-number,.chapter-name{display:inline;font:inherit;color:inherit;letter-spacing:inherit;margin:0}.cover h1{font-size:56px}.cover .edition{margin:0 0 34px}.cover .subtitle{margin:0 0 42px}.cover .description{margin:0 0 36px}.cover .date{margin-top:54px}.footer{display:none!important}.focus-mode .reading-area{margin:0;padding:0}.chapter-outline{display:none!important}}
@@ -71,11 +76,9 @@ dialog{color:var(--ink);background:var(--paper);padding:0;border:1px solid var(-
 <div class="reading-area">
 <main id="reader" tabindex="-1">
 <section class="cover" id="cover" aria-labelledby="cover-title">
-<div class="cover-top"><span>NAVAL RESEARCH</span><span>2021 — 2026</span></div>
-<p class="edition">四部 · 十六章</p>
+<div class="cover-top"><span>2021 — 2026</span><span>四部 · 十六章</span></div>
 <h1 id="cover-title" tabindex="-1">纳瓦尔研究</h1>
 <p class="subtitle">AI时代的财富、工作与幸福</p>
-<p class="description">从工作与能力出发，重新理解学习、财富与幸福。<br>一部基于公开表达的独立中文研究书稿。</p>
 
 <div class="cover-actions">
 <a class="start-link" href="#c00">开始阅读<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
@@ -87,7 +90,6 @@ dialog{color:var(--ink);background:var(--paper);padding:0;border:1px solid var(-
 <a href="#c09"><span class="index-number">03</span><span class="index-name">在变化中定位</span><span class="index-arrow" aria-hidden="true">↗</span></a>
 <a href="#c13"><span class="index-number">04</span><span class="index-name">财富与幸福的一生</span><span class="index-arrow" aria-hidden="true">↗</span></a>
 </nav>
-<p class="date">2026-10-02 · 重编稿</p>
 <noscript><p class="no-script">当前显示全书正文，可使用目录跳转与浏览器查找。</p></noscript>
 </section>
 <noscript><nav class="static-toc" aria-label="全书目录"><h2>目录</h2><div class="toc-group"><p>卷首</p><a href="#c00" data-chapter="00">写在前面</a></div><div class="toc-group"><p>第1部 工作正在改变</p><a href="#c01" data-chapter="01">第01章 一个人的创造能力</a><a href="#c02" data-chapter="02">第02章 任务改变以后</a><a href="#c03" data-chapter="03">第03章 与机器一起判断</a><a href="#c04" data-chapter="04">第04章 机会的另一面</a></div><div class="toc-group"><p>第2部 能力怎样成为财富</p><a href="#c05" data-chapter="05">第05章 从作品到需求</a><a href="#c06" data-chapter="06">第06章 专长在行动中形成</a><a href="#c07" data-chapter="07">第07章 分发与信任</a><a href="#c08" data-chapter="08">第08章 所有权与长期积累</a></div><div class="toc-group"><p>第3部 在变化中定位</p><a href="#c09" data-chapter="09">第09章 带着问题学习</a><a href="#c10" data-chapter="10">第10章 懂得更深一层</a><a href="#c11" data-chapter="11">第11章 选择适合自己的角色</a><a href="#c12" data-chapter="12">第12章 在不确定中前进</a></div><div class="toc-group"><p>第4部 财富与幸福的一生</p><a href="#c13" data-chapter="13">第13章 选择自己的欲望</a><a href="#c14" data-chapter="14">第14章 喜欢自己的工作</a><a href="#c15" data-chapter="15">第15章 时间怎样回到生活</a><a href="#c16" data-chapter="16">第16章 自由的现实基础</a></div><div class="toc-group"><p>书后</p><a href="#c17" data-chapter="17">结语：保留自己的判断</a><a href="#c18" data-chapter="18">关于这部书与它的材料</a></div></nav></noscript>
@@ -100,7 +102,6 @@ dialog{color:var(--ink);background:var(--paper);padding:0;border:1px solid var(-
 <span class="position" id="position"></span>
 <button type="button" id="next" aria-label="下一章"><span class="nav-copy"><span class="nav-caption">下一章</span><span class="nav-title" id="next-title"></span></span><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
 </nav>
-<footer class="footer"><span>2021—2026 公开表达 · 重编稿 v1.1</span></footer>
 </div>
 <div id="reader-announcement" class="sr-only reader-announcement" aria-live="polite"></div>
 <dialog id="contents-dialog" class="contents-dialog" aria-labelledby="contents-title">
@@ -121,7 +122,7 @@ dialog{color:var(--ink);background:var(--paper);padding:0;border:1px solid var(-
 <div class="dialog-body">
 <div class="setting-row"><label for="font-size">文字大小 <output id="font-output" for="font-size">19px</output></label><div class="range-control"><button type="button" id="font-decrease" aria-label="减小字号">A−</button><input id="font-size" type="range" min="16" max="24" step="1" value="19"><button type="button" id="font-increase" aria-label="增大字号">A+</button></div></div>
 <div class="setting-row"><span class="setting-heading">阅读主题</span><div class="segmented" id="theme-options" role="group" aria-label="阅读主题"><button type="button" data-theme-choice="light" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg>纸白</button><button type="button" data-theme-choice="dark" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg>夜读</button></div></div>
-<p class="storage-note" id="storage-note">自动记住字号、主题与读到的位置。</p>
+<p class="storage-note" id="storage-note" hidden></p>
 </div>
 </dialog>
 <script>
@@ -146,7 +147,7 @@ const chapters = [{"id": "00", "title": "写在前面", "part": "卷首"}, {"id"
   const setText = (id,text) => {const node=byId(id);if(node)node.textContent=text;};
   const listen = (id,event,handler) => byId(id)?.addEventListener(event,handler);
   function read(key,session=false){try{return JSON.parse((session?sessionStorage:localStorage).getItem(key));}catch{return null;}}
-  function write(key,value,session=false){try{(session?sessionStorage:localStorage).setItem(key,JSON.stringify(value));}catch{setText('storage-note','此浏览器无法保存数据；本次阅读与设置仍可使用。');}}
+  function write(key,value,session=false){try{(session?sessionStorage:localStorage).setItem(key,JSON.stringify(value));}catch{const note=byId('storage-note');if(note){note.textContent='此浏览器无法保存数据；本次阅读与设置仍可使用。';note.hidden=false;}}}
   const initial = read(keys.settings) || read('naval-reader-settings-v1.1') || read(keys.oldSettings) || {};
   const settings = {
     fontSize:Number(initial.fontSize)>=16&&Number(initial.fontSize)<=24?Number(initial.fontSize):19,
@@ -270,7 +271,7 @@ const chapters = [{"id": "00", "title": "写在前面", "part": "卷首"}, {"id"
     setText('position',index<0?'':`${index+1} / ${chapters.length}`);
     setText('previous-title',chapters[index-1]?.title||'已到开篇');setText('next-title',chapters[index+1]?.title||'已到书末');
     setText('reading-label',chapter?.title||subtitle);document.title=chapter?chapter.title+' · '+coverTitle:originalTitle;
-    if(chapter&&byId('chapter-context')){const han=(section.textContent.match(/[\u4e00-\u9fff]/g)||[]).length;const part=document.createElement('span'),time=document.createElement('span');part.textContent=chapter.part;time.textContent=`约 ${Math.max(1,Math.ceil(han/600))} 分钟`;byId('chapter-context').replaceChildren(part,time);}
+    if(chapter&&byId('chapter-context')){const part=document.createElement('span');part.textContent=chapter.part;byId('chapter-context').replaceChildren(part);}
     for(const a of document.querySelectorAll('[data-chapter]')){if(a.dataset.chapter===current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');}
     setText('reader-announcement',chapter?'已打开 '+chapter.title:'已回到封面');
     const epoch=navigationEpoch;
